@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotor Support - Boas-vindas</title>
+    <style>
+        /* Estilos para o fundo transparente do pop-up */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup {
+            background: rgba(255, 255, 255, 0.9); /* Fundo do conteúdo semitransparente */
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInPopup 0.5s forwards ease-out;
+        }
+
+        .popup h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .popup p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .popup strong {
+            color: #4CAF50; /* Destaque no nome do app */
+        }
+
+        /* Animação de suavização da entrada */
+        @keyframes fadeInPopup {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="popup-container" id="popupContainer">
+        <div class="popup">
+            <h1>Bem-vindo(a) ao Promotor Support!</h1>
+            <p>Obrigado por usar o <strong>Promotor Support</strong>. Nossa missão é fornecer informações e relatórios precisos para apoiar seu desempenho. Aproveite as funcionalidades e tenha sucesso no campo!</p>
+        </div>
+    </div>
+
+    <script>
+        // Função opcional para fechar automaticamente após 5 segundos
+        setTimeout(function() {
+            document.getElementById('popupContainer').style.display = 'none';
+        }, 50000);
+    </script>
+
+</body>
+</html>
